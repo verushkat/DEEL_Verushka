@@ -4,17 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "regression": "npx playwright test",
-    "webTests": "npx playwright test --grep @Web",
-    "APITests": "npx playwright test --grep @API",
-    "SafariNewConfig": "npx playwright test --config playwright.config1.js --project=safari",
-    "CucumberRegression": "npx cucumber-js --tags '@Regression' --retry 1 --exit --format html:cucumber-report.html"
+    "test": "jest"
+
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/tests/"
+    ]
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.33.0",
-    "allure-playwright": "^2.3.0"
+    "allure-playwright": "^2.3.0",
+    "jest": "^29.5.0"
   }
 }
